@@ -100,7 +100,7 @@ RSI_timer0:
 unsigned char obtener_tics(unsigned short codes[][34],
   unsigned char ccode,
   unsigned char cpair,
-  unsigned char cstate);
+  unsigned char cstate)
 {
   return (unsigned char)(codes[ccode][cpair] >> (cstate * 8));
 }
