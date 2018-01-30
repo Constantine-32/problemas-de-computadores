@@ -42,7 +42,7 @@ void main()
 }
 
 
-// RSI del timer0 (1.700 Hz) en C:
+// RSI del timer0 (1.700 Hz) en C.
 void RSI_timer0()
 {
   if (tics == 0)
@@ -62,7 +62,7 @@ void RSI_timer0()
 }
 
 
-@; RSI del timer0 (1.700 Hz) en ARM:
+@; RSI del timer0 (1.700 Hz) en ARM.
 RSI_timer0:
     push {r0-r5, lr}
     ldr r5, =tics
@@ -96,7 +96,7 @@ RSI_timer0:
     pop {r0-r5, pc}
 
 
-// Funcion obtener_tics() en C:
+// Funcion obtener_tics() en C.
 unsigned char obtener_tics(unsigned short codes[][34],
   unsigned char ccode,
   unsigned char cpair,
@@ -106,14 +106,14 @@ unsigned char obtener_tics(unsigned short codes[][34],
 }
 
 
-@; Funcion obtener_tics() en ARM:
-@; Parametros:
-@;  R0: unsigned short codes[][34]
-@;  R1: unsigned char ccode
-@;  R2: unsigned char cpair
-@;  R3: unsigned char cstate
-@; Return:
-@;  R0: unsigned char tics
+@; Funcion obtener_tics() en ARM.
+@; Parámetros:
+@;  R0 = unsigned short codes[][34]
+@;  R1 = unsigned char ccode
+@;  R2 = unsigned char cpair
+@;  R3 = unsigned char cstate
+@; Resultado:
+@;  R0 = unsigned char tics
 obtener_tics:
     push {r1-r4, lr}
     ldrb r1, [r1]
