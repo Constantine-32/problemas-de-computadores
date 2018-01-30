@@ -1,5 +1,5 @@
 /*************************************************************
-*   Problema: Problema de Examen (1 Conv.): boca artificial
+*   Problema de Examen (1 Conv.): boca artificial
 *   Autor: Christian Callau Romero
 *   Fecha: Enero 2018               Versión: 1.0
 *************************************************************/
