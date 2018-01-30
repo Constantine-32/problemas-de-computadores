@@ -1,7 +1,7 @@
 /*************************************************************
 *   Problema: Problema de Examen (1 Conv.): boca artificial
 *   Autor: Christian Callau Romero
-*   Data: Gener 2018               Version: 1.0
+*   Fecha: Enero 2018               Versión: 1.0
 *************************************************************/
 
 #define MAX_CAR 16
