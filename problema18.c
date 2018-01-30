@@ -40,8 +40,9 @@ void main()
 // RSI del timer0 en C.
 void RSI_timer0()
 {
-  if (brig_counter < brightness) REG_DOUT.bit_5 = 1;
-  else REG_DOUT.bit_5 = 0;
+  unsigned short *pointer = REG_DOUT;
+  if (brig_counter < brightness) *pointer |= 0x20;  // bit 5 de REG_DOUT a 1.
+  else *pointer &= 0xFFDF;  // bit 5 de REG_DOUT a 0.
   brig_counter++;
   if (brig_counter == 100) brig_counter = 0;
 }
