@@ -22,7 +22,7 @@ void main()
   {
     swiWaitForVBlank(); // relajar bucle principal
     // condicionando la frequencia del bucle principal
-    // a 60HZ (0.1666 seg) dando tiempo de sobra a una
+    // a 60 Hz (0.1666 seg) dando tiempo de sobra a una
     // sequencia (0.1141 seg) a transmitirse, por tanto
     // no hay que preocuparse por posibles solapaciones
     // de sequencias.
