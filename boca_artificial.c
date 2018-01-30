@@ -36,7 +36,7 @@ void main()
 }
 
 
-// RSI del timer 0 en C:
+// RSI del timer0 en C.
 void RSI_timer0()
 {
   if (cur_fcs == 0)
@@ -57,7 +57,7 @@ void RSI_timer0()
 }
 
 
-@; RSI del timer 0 en ARM:
+@; RSI del timer0 en ARM.
 RSI_timer0:
     push {r0-r6, lr}
     ldr r0, =cur_fcs
@@ -94,7 +94,7 @@ RSI_timer0:
     pop {r0-r6, pc}
 
 
-// Funcion siguiente_palabra() en C:
+// Funcion siguiente_palabra() en C.
 int siguiente_palabra(char *string)
 {
   if (REG_IPC_FIFO_CR & 0x100) return 0;
@@ -109,11 +109,11 @@ int siguiente_palabra(char *string)
 }
 
 
-@; Funcion siguiente_palabra() en ARM:
-@; Parametros:
-@;  R0: char *string
-@; Return:
-@;  R0: string length
+@; Funcion siguiente_palabra() en ARM.
+@; Parámetros:
+@;  R0 = char *string
+@; Resultado:
+@;  R0 = int string_length
 siguiente_palabra:
     push {r1-r5, lr}
     mov r1, #0            @; Valor de retorno
