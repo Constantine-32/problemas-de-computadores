@@ -45,7 +45,7 @@ void main()
 // RSI del timer0 (1.700 Hz) en C.
 void RSI_timer0()
 {
-  if (tics == 0)
+  if (tics <= 0)
   {
     state ^= 1; // "flip" el state 1 → 0, 0 → 1. 
     current_pair += state;  // si state pasa a 1, current_pair++;
@@ -68,7 +68,7 @@ RSI_timer0:
     ldr r5, =tics
     ldrb r4, [r5]
     cmp r4, #0
-    bne .Lrsi_t0_if1
+    bhi .Lrsi_t0_if1
     ldr r0, =state
     ldrb r3, [r0]
     eor r3, #1
